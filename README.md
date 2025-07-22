@@ -2,7 +2,7 @@
 
 A modern medical chatbot powered by Google Gemini AI that can answer medical questions and provide health information.
 
-## 🌐 Live Demo
+## Live Demo
 
 **Deployed on Vercel:** [https://medbot-mu.vercel.app/](Demo)
 
