@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MedBot - Medical Assistant</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="logo">
+                <i class="fas fa-heartbeat"></i>
+                <h1>MedBot</h1>
+            </div>
+            <p class="subtitle">Your AI Medical Assistant</p>
+        </header>
+
+        <main class="chat-container">
+            <div class="chat-messages" id="chatMessages">
+                <div class="message bot-message">
+                    <div class="message-avatar">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <div class="message-content">
+                        <p>Hello! I'm MedBot, your AI medical assistant. I can help answer your medical questions and provide general health information. Please note that I'm not a substitute for professional medical advice. What can I help you with today?</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="chat-input-container">
+                <form id="chatForm" class="chat-form">
+                    <div class="input-wrapper">
+                        <input 
+                            type="text" 
+                            id="messageInput" 
+                            placeholder="Ask me about your health concerns..."
+                            autocomplete="off"
+                        >
+                        <button type="submit" id="sendButton">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </form>
+                <div class="disclaimer">
+                    <i class="fas fa-info-circle"></i>
+                    <span>This is for informational purposes only. Always consult healthcare professionals for medical advice.</span>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
