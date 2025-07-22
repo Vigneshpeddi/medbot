@@ -9,12 +9,20 @@ const genAI = new GoogleGenerativeAI(config.GEMINI_API_KEY);
 
 app.use(cors());
 app.use(express.json());
-app.use(express.static('public'));
+app.use(express.static(path.join(__dirname, 'public')));
 
 const medicalPrompt = `You are a medical assistant chatbot. Your role is to provide helpful, accurate, and safe medical information. Always remind users to consult with healthcare professionals for serious medical concerns. Be informative but cautious in your responses.`;
 
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'index.html'));
+});
+
+app.get('/styles.css', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'styles.css'));
+});
+
+app.get('/script.js', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'script.js'));
 });
 
 app.post('/api/chat', async (req, res) => {
@@ -69,6 +77,10 @@ app.post('/api/chat', async (req, res) => {
       });
     }
   }
+});
+
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
 app.listen(config.PORT, () => {
