@@ -2,6 +2,10 @@
 
 A modern medical chatbot powered by Google Gemini AI that can answer medical questions and provide health information.
 
+## 🌐 Live Demo
+
+**Deployed on Vercel:** [https://medbot-mu.vercel.app/](Demo)
+
 ## Prerequisites
 
 - Node.js (version 14 or higher)
@@ -44,6 +48,15 @@ A modern medical chatbot powered by Google Gemini AI that can answer medical que
 2. Press Enter or click the send button
 3. Wait for MedBot to process your question and provide a response
 4. Continue the conversation as needed
+
+## Deployment
+
+This project is configured for easy deployment on Vercel:
+
+1. Push your code to GitHub
+2. Connect your repository to Vercel
+3. Add environment variable: `GEMINI_API_KEY`
+4. Deploy automatically
 
 ## Development
 
